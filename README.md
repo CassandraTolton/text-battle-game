@@ -5,9 +5,12 @@ uses simple classes to keep track of monsters and character health, damage, and 
 
 
 ![fight1](https://user-images.githubusercontent.com/69628215/140593535-71a6f340-0e32-4351-87be-facff38fff33.PNG)
+
 ![fight2](https://user-images.githubusercontent.com/69628215/140593543-6c13a017-d17b-4dd2-95a0-0a0f251ad9fc.PNG)
 
+
 the inventory takes you to a seperate screen when you can see your list of options
+
 ![inventory](https://user-images.githubusercontent.com/69628215/140593562-25091f5f-2253-4d3f-8806-0f3bdfad74ba.PNG)
 
 
