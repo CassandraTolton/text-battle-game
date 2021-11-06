@@ -1,0 +1,7 @@
+C:\Users\17025\source\repos\TextBattleGame\TextBattleGame\obj\Debug\TextBattleGame.csproj.AssemblyReference.cache
+C:\Users\17025\source\repos\TextBattleGame\TextBattleGame\obj\Debug\TextBattleGame.csproj.CoreCompileInputs.cache
+C:\Users\17025\source\repos\TextBattleGame\TextBattleGame\bin\Debug\TextBattleGame.exe.config
+C:\Users\17025\source\repos\TextBattleGame\TextBattleGame\bin\Debug\TextBattleGame.exe
+C:\Users\17025\source\repos\TextBattleGame\TextBattleGame\bin\Debug\TextBattleGame.pdb
+C:\Users\17025\source\repos\TextBattleGame\TextBattleGame\obj\Debug\TextBattleGame.exe
+C:\Users\17025\source\repos\TextBattleGame\TextBattleGame\obj\Debug\TextBattleGame.pdb
