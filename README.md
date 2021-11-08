@@ -12,6 +12,10 @@ You will know when encounter is about to happen when you are given three choices
 
 ![fight1](https://user-images.githubusercontent.com/69628215/140593535-71a6f340-0e32-4351-87be-facff38fff33.PNG)
 
+During the fight you have two options
+1. Attack - attacks the monster by rolling a dice and seeing if you hit the monster
+2. Look into Inventory - allows you to look into the inventory. (Note: if you use an item it counts as a turn, however, if you do not use an item then it does not count as a turn)
+
 ![fight2](https://user-images.githubusercontent.com/69628215/140593543-6c13a017-d17b-4dd2-95a0-0a0f251ad9fc.PNG)
 
 ## Inventory
