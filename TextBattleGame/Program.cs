@@ -58,6 +58,7 @@ namespace TextBattleGame
                 Console.WriteLine("\t3) Exit");
                 int userChoice = int.Parse(Console.ReadLine());
 
+                //switch case that uses the users choice from the menu
                 switch (userChoice)
                 {
                     case 1:
@@ -112,6 +113,7 @@ namespace TextBattleGame
             }
 
             //first fight in courtyard
+            //you can sneak past this first encounter
             void Fight1()
             {
                 //clears the console to make sure the fight text can be seen clearly and not be cluttered
@@ -123,10 +125,13 @@ namespace TextBattleGame
                 Console.WriteLine("\t3) Look in iventory");
                 Console.WriteLine("\t4) Exit");
                 int userChoice = int.Parse(Console.ReadLine());
+
+                //uses user choice to see which route to take
                 
                 //switch case handling the choices for the actions before the fight
                 switch (userChoice)
                 {
+                    //fight the monster
                     case 1:
                         Console.WriteLine("the samruai sees you and makes eye contact, unsheathing his weapon");
                         Console.WriteLine("you draw your sword and prepare to fight.");
@@ -135,6 +140,7 @@ namespace TextBattleGame
                         LongHallway();
                         
                         break;
+                    //sneak past
                     case 2:
                         Console.WriteLine("you go off to the left side, hiding in the shadows");
                         RollDice();
@@ -146,6 +152,7 @@ namespace TextBattleGame
                             LongHallway();
 
                         }
+                        //visiable is a bool value that is turned true when the character uses the torch
                         else
                         {
                             if(Mc.Visable)
@@ -160,14 +167,17 @@ namespace TextBattleGame
 
                         }
                         break;
+                    //opens the inventory
                     case 3:
                         OpenInventory();
                         Fight1();
                         break;
+                    //exits the text game
                     case 4:
-                        Console.WriteLine("Goodbye, thank you for play!");
+                        Console.WriteLine("Goodbye, thank you for playing!");
                         playGame = false;
                         break;
+                    //catches invalid inputs
                     default:
                         Console.WriteLine("Sorry that is not a valid input, please try again");
                         break;
