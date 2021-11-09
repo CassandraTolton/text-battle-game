@@ -108,6 +108,7 @@ namespace TextBattleGame
                 Console.ReadLine();
                 Console.WriteLine("The doors open automatically, as if someone or something is waitng for you inside");
                 Console.ReadLine();
+                //intiates the first fight
                 Fight1();
             }
 
@@ -115,6 +116,7 @@ namespace TextBattleGame
             //you can sneak past this first encounter
             void Fight1()
             {
+                //clears the console to make sure the fight text can be seen clearly and not be cluttered
                 Console.Clear();
                 Console.WriteLine("you see a samurai standing before you, gaurding the entrance to the palace");
                 Console.WriteLine("what do you do?");
@@ -125,12 +127,15 @@ namespace TextBattleGame
                 int userChoice = int.Parse(Console.ReadLine());
 
                 //uses user choice to see which route to take
+                
+                //switch case handling the choices for the actions before the fight
                 switch (userChoice)
                 {
                     //fight the monster
                     case 1:
                         Console.WriteLine("the samruai sees you and makes eye contact, unsheathing his weapon");
                         Console.WriteLine("you draw your sword and prepare to fight.");
+                        //gives the index of the monster to get from a list of enemies
                         GoesFirstBattle(1);
                         LongHallway();
                         
@@ -194,12 +199,16 @@ namespace TextBattleGame
                     switch (ans)
                     {
                         case 1:
+                            //calls a attack method from the class of character
+                            //uses the dmg variable that is from the class as well
                             Mc.Attack(Mc.Dmg);
                             if (Mc.Roll >= 3)
                             {
+                                //under the monster class theres a take damage method
                                 Names[x].TakeDamage(Mc.Dmg);
                             }
-
+                            
+                            //checks to see if you have drink the water in your inventory
                             if (Mc.HasDrink)
                             {
                                 Console.WriteLine("You attack again");
@@ -214,16 +223,21 @@ namespace TextBattleGame
                             OpenInventory();
                             break;
                     }
-
+                    
+                    //displays the monsters information and then checks if their hp is 0 or below
                     Names[x].DisplayInfo();
                     Names[x].Die();
 
 
 
                     Console.ReadLine();
-
+                    
+                    //checks to see if the monster is still alive
                     if(Names[x].Alive)
                     {
+                        //now the enemy attacks
+                        //this sequence is very similar to the characters attack
+                        //note that i will soon change this to a method to clean up the repeated code
                         Names[x].Attack(Names[x].Dmg);
                         if (Names[x].Roll >= 3)
                         {
@@ -245,6 +259,7 @@ namespace TextBattleGame
                 {
                     GameOver(x);
                 }
+                //keeps track how many monsters the player has killed
                 Mc.Kills += 1;
 
                 return;
@@ -253,6 +268,7 @@ namespace TextBattleGame
 
             //Battle sequence If the enemy goes first
             //takes x which is the index for the names list part of the samurai1 class
+            //note that i will delete this portion and simply have it under one method and pass a differnet number
             void Battle2(int x)
             {
                 do
@@ -380,6 +396,7 @@ namespace TextBattleGame
                             Console.WriteLine("upon opening the doors you are blinded by a bright light and then everything turns black");
                         }
                         Console.ReadLine();
+                        //intitates the end game screen and displays the players stats: hp, attack, inventory and kills
                         GameOver(0);
                         break;
                     case 3:
