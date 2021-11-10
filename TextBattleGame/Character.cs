@@ -8,14 +8,20 @@ namespace TextBattleGame
 {
     class Character : Samurai1
     {
+        //keeps track if character has drank the water and gets another attack
         protected internal bool DoubleAttack { get; set; }
 
+        //keeps track if the character has used the torch
         protected internal bool Visable { get; set; }
 
+        //keeps track if that character has eaten the food
         protected internal bool HasEaten {get; set;}
 
+        //only keeps track if the character has drank the water
+        //Note: i dont think this bool is neccesary but i will need to check
         protected internal bool HasDrink { get; set; }
 
+        //keeps track the amount of kill the player has
         protected internal int Kills { get; set; }
 
         //sets values when the main character is created
@@ -43,6 +49,7 @@ namespace TextBattleGame
         {
             if (this.HitPoints <= 0)
             {
+                //this.alive is from teh samurai class the that character inherits from
                 this.Alive = false;
                 Console.WriteLine($"You have been defeated");
                 return;
