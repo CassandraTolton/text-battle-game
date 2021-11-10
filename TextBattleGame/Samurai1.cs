@@ -11,10 +11,16 @@ namespace TextBattleGame
         //You will need to use at least 1 additional class other than the class with the main method.
         //The class needs to contain at least 3 different private members (variable/attribute) and public getter and setter properties for those members.
         //These could be name, points, whether the character is good or evil, etc.
+        
+        //keeps track of the hitpoints (health)
         protected internal int HitPoints { get; set; }
+        //the name of the character/enemy
         protected internal string Name { get; set; }
+        //keeps track whether or not their hp is above 0
         protected internal bool Alive { get; set; }
+        //keeps track of thier damage
         protected internal int Dmg { get; set; }
+        //keeps track what they roll
         protected internal int Roll { get; set; }
 
 
@@ -35,6 +41,7 @@ namespace TextBattleGame
         }
 
         //You might have a method for displaying information about the object created from the class, or maybe a method that subtracts points from the Hit Points attribute.
+        //displays the info
         public void DisplayInfo()
         {
             Console.WriteLine($"Name: {this.Name}");
